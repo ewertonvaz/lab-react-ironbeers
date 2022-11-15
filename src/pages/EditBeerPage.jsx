@@ -22,11 +22,13 @@ function EditBeerPage() {
         e.preventDefault();
         delete clone._id;
         const response = await axios.put(endPoint + 'edit/' + beerId, clone);
-        if (response.status === 200){
+        try {
+            console.log(response);
             toast.success('Cerveja atualizada com sucesso!');
             setForm({});
             setTimeout( () => navigate(`/beers/${beerId}`), 2000);
-        } else {
+        } catch(error) {
+            console.log(error);
             toast.error('Não foi possível atualizar dados da cerveja!');
         }
     }
