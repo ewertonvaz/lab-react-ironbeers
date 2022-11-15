@@ -8,17 +8,16 @@ const endPoint = "https://ironbeer-api.fly.dev/random";
 
 function RandomBeerPage() {
     const [ beer, setBeer] = useState([]);
-    const [ loading, setLoading ] = useState(false);
-    
-    async function fetchBeerById(){
-        setLoading(true);
-        const response = await axios.get(endPoint);
-        setBeer(response.data);
-        setLoading(false);
-    }
-    
+    const [ loading, setLoading ] = useState(false);  
 
     useEffect( () => {
+        async function fetchBeerById(){
+            setLoading(true);
+            const response = await axios.get(endPoint);
+            setBeer(response.data);
+            setLoading(false);
+        }
+
         fetchBeerById();
     },
         []

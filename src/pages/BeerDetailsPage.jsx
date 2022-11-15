@@ -12,18 +12,18 @@ function BeerDetailsPage() {
     const [ beer, setBeer] = useState([]);
     const [ loading, setLoading ] = useState(false);
     
-    async function fetchBeerById(){
-        setLoading(true);
-        console.log(endPoint + beerId);
-        const response = await axios.get(endPoint + beerId);
-        setBeer(response.data);
-        setLoading(false);
-    }
-
     useEffect( () => {
+        async function fetchBeerById(){
+            setLoading(true);
+            console.log(endPoint + beerId);
+            const response = await axios.get(endPoint + beerId);
+            setBeer(response.data);
+            setLoading(false);
+        }
+
         fetchBeerById();
     },
-        []
+        [beerId]
     );
 
     return ( 

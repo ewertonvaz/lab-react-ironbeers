@@ -37,3 +37,9 @@
 .wrapper img {
     height: 90%;
 }
+
+.wrapper a {
+    background-color: #65C3FE;
+    color: white;
+    text-transform: uppercase;
+}

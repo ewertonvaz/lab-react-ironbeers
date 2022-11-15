@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './BeerMoreDetails.module.css';
 
 function BeerMoreDetails({beer}) {
@@ -15,6 +16,8 @@ function BeerMoreDetails({beer}) {
                 </div>
                 <p>{beer.description}</p>
                 <h3>{beer.contributed_by}</h3>
+
+                <Link to={`/edit-beer/${beer._id}`}>Editar</Link>
             </div>
         </div> );
 }
