@@ -1,0 +1,39 @@
+.wrapper {
+    border: 1px solid gray;
+    display: flex;
+    height: 200px;
+    align-items: center;
+}
+
+.wrapper div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    height: 90%;
+}
+
+.wrapper div:nth-child(1) {
+    width: 25%;
+    align-items: center;
+}
+
+.wrapper h1 {
+  margin: 2px 4px;
+  font-weight: lighter;
+}
+
+.wrapper h2 {
+    margin: 2px 4px;
+    opacity: 0.4;
+}
+
+.wrapper h3 {
+    margin: 2px 4px;
+    font-size: 0.8rem;
+}
+
+.wrapper img {
+    height: 90%;
+}

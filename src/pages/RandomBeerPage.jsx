@@ -3,6 +3,7 @@ import { useState, useEffect} from "react";
 import axios from "axios";
 import BeerMoreDetails from "../components/BeerMoreDetails";
 const endPoint = "https://ironbeer-api.fly.dev/random";
+//const endPoint = "https://ih-beers-api2.herokuapp.com/beers/random";
 
 function RandomBeerPage() {
     const [ beer, setBeer] = useState([]);

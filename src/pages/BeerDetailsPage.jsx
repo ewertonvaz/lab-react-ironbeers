@@ -4,6 +4,7 @@ import { useState, useEffect} from "react";
 import axios from "axios";
 import BeerMoreDetails from "../components/BeerMoreDetails";
 const endPoint = "https://ironbeer-api.fly.dev/";
+//const endPoint = "https://ih-beers-api2.herokuapp.com/beers/";
 
 function BeerDetailsPage() {
     const { beerId } = useParams();
@@ -16,13 +17,10 @@ function BeerDetailsPage() {
         setBeer(response.data);
         //setLoading(false);
     }
-    
 
     useEffect( () => {
         fetchBeerById();
-    },
-        []
-    );
+    });
 
     return ( 
         <>

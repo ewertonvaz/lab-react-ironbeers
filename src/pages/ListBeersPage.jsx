@@ -4,6 +4,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import BeerDetails from "../components/BeerDetails";
 const endPoint = "https://ironbeer-api.fly.dev/";
+//const endPoint = "https://ih-beers-api2.herokuapp.com/beers";
+
 
 function ListBeersPage() {
     const [ allBeers, setBeers] = useState([]);

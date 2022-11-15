@@ -1,14 +1,16 @@
+import styles from './BeerDetails.module.css';
+
 function BeerDetails({beer}) {
     return (
-        <div style={{
-            border: "1px solid gray",
-            display: "flex"
-        }}>
-            <img src={beer.image} alt="beer" width="15%" />
-            <div style={{display: "flex", flexDirection:"column"}}>
+        <div className={styles.wrapper}>
+            <div>
+              <img src={beer.image ? beer.image : beer.image_url} alt="beer"/>              
+            </div>
+
+            <div>
                 <h1>{beer.name}</h1>
                 <h2>{beer.tagline}</h2>
-                <h3>{beer.contributed_by}</h3>
+                <h3><strong>Created by: </strong>{beer.contributed_by}</h3>
             </div>
         </div>
       );

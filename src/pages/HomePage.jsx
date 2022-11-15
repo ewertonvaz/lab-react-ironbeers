@@ -6,8 +6,7 @@ import randomBeerImg from "../assets/random-beer.png"
 function HomePage() {
     return ( <div style={{
         display: "flex",
-        flexDirection: "column",
-        width: "50vw"
+        flexDirection: "column"
     }}>
         <Link to="/beers">
             <HomeCard title="All Beers" img={beersImg} />
